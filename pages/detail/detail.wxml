@@ -1,0 +1,70 @@
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <text class="weui-loading" />
+    <text class="loading-text">加载中...</text>
+  </view>
+</block>
+<block wx:else>
+  <view class="container">
+    <view class="film-image-bg">
+      <view class='film-image'>
+       <image src="{{url}}"></image>
+      </view>
+    </view>
+    <view class="film-item-data">
+      <view class='film-info-container'>
+        <view class="film-info">
+          <view>
+            <text class="film-title">{{name}}</text>
+          </view>
+          <view class="detail-directors">
+            <text class="detail-lable">导演：</text>
+            <block wx:for-items="{{film.directors}}" wx:for-item="director">
+              <text class="detail-data">{{director.name}}</text>
+            </block>
+          </view>
+          <view class="detail-casts">
+            <text class="detail-lable">主演：</text>
+            <block wx:for-items="{{film.casts}}" wx:for-item="cast">
+              <text class="detail-data">{{cast.name}}  </text>
+            </block>
+          </view>
+          <view class="genres">
+            <text class="detail-lable">类型：</text>
+            <block wx:for-items="{{film.genres}}" wx:for-item="genre">
+              <text class="detail-data">{{genre}}  </text>
+            </block>
+          </view>
+          <view class="genres">
+            <text class="detail-lable">国家：</text>
+            <block wx:for-items="{{film.countries}}" wx:for-item="country">
+              <text class="detail-data">{{country}}</text>
+            </block>
+          </view>
+          <view class="collect-wish">
+            <text class="see">看过:</text>
+            <text class='data'>{{film.collect_count}}</text>
+            <text class="see">  想看:</text>
+            <text class='data'>{{film.wish_count}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='film-info-right'>
+        <text class='rating'>8.0</text>
+          <view class="rankstars">
+            <image class="image" src='../../image/icon_star_choose.png'></image>
+            <image class="image" src='../../image/icon_star_choose.png'></image>
+            <image class="image" src='../../image/icon_star_choose.png'></image>
+            <image class="image" src='../../image/icon_star_choose.png'></image>
+            <image class="image" src='../../image/icon_star_unchoose.png'></image>
+          </view>
+      </view>
+    </view>
+    <view class="summary">
+      <text class="title">简介</text>
+      <view class="content">
+        {{film.summary}}
+      </view>
+    </view>
+  </view>
+</block>

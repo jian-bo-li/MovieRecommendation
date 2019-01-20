@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/in_theathers/in_theathers",
+    "pages/about/about",
+    "pages/detail/detail"
+  ],
+  "tabBar": {
+    "color": "#BCBCBC",
+    "selectedColor": "#5B5983",
+    "borderStyle": "white",
+    "backgroundColor": "#fafafa",
+    "list": [
+      {
+        "pagePath": "pages/in_theathers/in_theathers",
+        "iconPath": "image/icon_index_normal.png",
+        "selectedIconPath": "image/icon_index_select.png",
+        "text": "电影推荐"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "image/icon_about_normal.png",
+        "selectedIconPath": "image/icon_about_select.png",
+        "text": "关于"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#010039",
+    "navigationBarTitleText": "电影推荐平台",
+    "navigationBarTextStyle": "white",
+    
+    "enablePullDownRefresh": true
+  },
+  "debug": true
+}

@@ -1,0 +1,5 @@
+<view>
+  <view class='container'>
+    <text class='content'>该平台为电影推荐平台，将定期向用户推荐电影，电影相关信息均由豆瓣提供。</text>
+  </view>
+</view>
